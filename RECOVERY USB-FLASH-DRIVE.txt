@@ -1,0 +1,21 @@
+HOW TO FORMAT USB FLASH DISH DRIVE
+USE COMMAND POWERSHELL 
+STEP BY STEP
+
+1.DISKPART
+2.LIST DISK
+3.SELECT DISK 1 0R 2
+4.DETAIL DISK 
+5.attributes disk set readonly
+6.detail disk
+7.select volume 4
+8.clean
+9.attributes disk clear readonly
+10.clean
+11.create partition primary
+12.active
+13.format fs=fat32 label=8G-usb quick
+14.detail disk
+15.select volume 4
+16.format recommended override
+17.exit
